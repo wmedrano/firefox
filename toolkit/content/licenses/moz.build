@@ -60,11 +60,19 @@ LICENSES["apache"].paths = [
 
 # These crates have no moz.build of their own to carry a LICENSED_UNDER, so the
 # feature that pulls them into the build is checked here instead.
-if CONFIG["MOZ_FONTATIONS"]:
+if CONFIG["MOZ_FONTATIONS"] or CONFIG["MOZ_INCREMENTAL_FONT_TRANSFER"]:
     LICENSES["apache"].paths += [
         "third_party/rust/font-types/",
         "third_party/rust/read-fonts/",
         "third_party/rust/skrifa/",
+    ]
+
+if CONFIG["MOZ_INCREMENTAL_FONT_TRANSFER"]:
+    LICENSES["apache"].paths += [
+        "third_party/rust/incremental-font-transfer/",
+        "third_party/rust/shared-brotli-patch-decoder/",
+        "third_party/rust/skera/",
+        "third_party/rust/write-fonts/",
     ]
 
 if CONFIG["MOZ_CLANG_RT_ASAN_LIB_PATH"]:

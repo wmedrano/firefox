@@ -3043,6 +3043,7 @@ dependencies = [
  "harfbuzz_glue",
  "http_sfv",
  "idna_glue",
+ "incremental-font-transfer",
  "ipcclientcerts",
  "ipdl_utils",
  "jog",
@@ -3944,6 +3945,20 @@ dependencies = [
  "nserror",
  "nsstring",
  "percent-encoding",
+]
+
+[[package]]
+name = "incremental-font-transfer"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b209a6a692cb0e9c1ceabbd680e52e814bc539476c8e9e44a4c8e8aacc28f7c7"
+dependencies = [
+ "font-types",
+ "read-fonts",
+ "shared-brotli-patch-decoder",
+ "skera",
+ "skrifa",
+ "write-fonts",
 ]
 
 [[package]]
@@ -7622,6 +7637,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "shared-brotli-patch-decoder"
+version = "0.1.4"
+dependencies = [
+ "cfg-if",
+]
+
+[[package]]
 name = "shell_windows"
 version = "0.1.0"
 dependencies = [
@@ -7697,6 +7719,18 @@ dependencies = [
  "serde_json",
  "static_prefs",
  "xpcom",
+]
+
+[[package]]
+name = "skera"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7ef75eddaf703e5a3e9eb837b9a7426ff995042a9a410f85981446cffed1e21e"
+dependencies = [
+ "hashbrown 0.17.1",
+ "skrifa",
+ "thiserror 2.0.12",
+ "write-fonts",
 ]
 
 [[package]]
@@ -9805,6 +9839,17 @@ dependencies = [
  "app_units",
  "euclid",
  "once_cell",
+]
+
+[[package]]
+name = "write-fonts"
+version = "0.50.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cae90d1d9f6d1d36ef116b0b1e651a6d7c12ba925439d4d06ff9adc94662a3d8"
+dependencies = [
+ "font-types",
+ "log",
+ "read-fonts",
 ]
 
 [[package]]

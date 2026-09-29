@@ -211,6 +211,9 @@ inherits = "release"
 panic = "unwind"
 
 [patch.crates-io]
+# Use the Brotli library built by Gecko.
+shared-brotli-patch-decoder = { path = "third_party/rust/shared-brotli-patch-decoder" }
+
 # The build system doesn't want those to be used, but they are pulled anyways (because
 # dependencies can't be disabled based on features), but remain unused. We ensure they
 # stay unused by overriding them with crates that contain enough to build the current

@@ -38,6 +38,8 @@ extern crate gkrust_utils;
 extern crate harfbuzz_glue;
 extern crate http_sfv;
 extern crate idna_glue;
+#[cfg(feature = "incremental-font-transfer")]
+extern crate incremental_font_transfer;
 extern crate ipdl_utils;
 extern crate jog;
 extern crate jsrust_shared;
